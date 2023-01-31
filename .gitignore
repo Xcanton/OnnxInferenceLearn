@@ -1,0 +1,4 @@
+lib/
+*.onnx
+*.pth
+*.zip
