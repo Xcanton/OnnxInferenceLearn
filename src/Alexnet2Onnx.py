@@ -2,10 +2,12 @@ import os
 import torch
 import torchvision
 
-model = torchvision.models.alexnet(weights=torchvision.models.AlexNet_Weights.IMAGENET1K_V1).cuda()
+# model = torchvision.models.alexnet(weights=torchvision.models.AlexNet_Weights.IMAGENET1K_V1).cuda()
+model = torchvision.models.alexnet(weights=torchvision.models.AlexNet_Weights.IMAGENET1K_V1)
 model.eval()
 
-dummy_input = torch.randn(10, 3, 224, 224, device="cuda")
+# dummy_input = torch.randn(10, 3, 224, 224, device="cuda")
+dummy_input = torch.randn(10, 3, 224, 224, device="cpu")
 
 # Providing input and output names sets the display names for values
 # within the model's graph. Setting these does not change the semantics
